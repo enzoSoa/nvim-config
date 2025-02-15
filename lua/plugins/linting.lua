@@ -9,6 +9,9 @@ return {
 
         g.ale_linters = {
           javascript = {'eslint'},
+          typescript = {'eslint'},
+          javascriptreact = {'eslint'},
+          typescriptreact = {'eslint'},
           vue = {'eslint'},
           ruby = {'rubocop', 'ruby'},
           lua = {'lua_language_server'}
@@ -16,6 +19,9 @@ return {
 
         g.ale_fixers = {
           javascript = {'eslint'},
+          typescript = {'eslint'},
+          javascriptreact = {'eslint'},
+          typescriptreact = {'eslint'},
           vue = {'eslint'},
         }
 
