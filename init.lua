@@ -12,6 +12,7 @@ local function telescopeSelectionSearch(searchType)
   telescope[searchType]({default_text = vim.fn.getreg('"')})
 end
 
+vim.keymap.set("v", "sr", 'y:%s/<C-r>0/', { noremap = true, silent = false })
 vim.keymap.set("v", "sf", 'y/<C-r>0', { noremap = true, silent = false })
 vim.keymap.set("v", "st", function() telescopeSelectionSearch("find_files")end, { noremap = true, silent = false })
 vim.keymap.set("v", "sg", function() telescopeSelectionSearch("live_grep")end, { noremap = true, silent = false })
