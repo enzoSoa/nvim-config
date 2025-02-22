@@ -10,27 +10,25 @@ return {
     "williamboman/mason-lspconfig.nvim",
     event = { "BufReadPre", "BufNewFile" },
     config = function()
+      local lspList = {
+        "ast_grep",
+        "clangd",
+        "lua_ls",
+        "ts_ls",
+        "volar",
+        "svelte",
+        "html",
+      }
+
       require("mason-lspconfig").setup({
-        ensure_installed = {
-          "ast_grep",
-          "clangd",
-          "lua_ls",
-          "ts_ls",
-          "volar",
-          "svelte",
-          "html",
-        },
+        ensure_installed = lspList,
         automatic_installation = true,
       })
 
       local lspconfig = require("lspconfig")
-      lspconfig.ast_grep.setup {}
-      lspconfig.clangd.setup {}
-      lspconfig.lua_ls.setup {}
-      lspconfig.ts_ls.setup {}
-      lspconfig.volar.setup {}
-      lspconfig.svelte.setup {}
-      lspconfig.html.setup {}
+      for _, lsp in pairs(lspList) do
+        lspconfig[lsp].setup {}
+      end
     end,
   },
   {
