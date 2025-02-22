@@ -1,3 +1,5 @@
+---@diagnostic disable: undefined-global
+
 return {
   {
     "zakissimo/smoji.nvim",
@@ -27,6 +29,11 @@ return {
       })
 
       vim.keymap.set("n", "<leader>gg", "<cmd>Gitsigns preview_hunk_inline<cr>", { noremap = true, silent = true })
+      vim.keymap.set("n", "<leader>gr", "<cmd>Gitsigns reset_hunk<cr>", { noremap = true, silent = true })
+      vim.keymap.set("n", "<leader>ga", "<cmd>Gitsigns stage_hunk<cr>", { noremap = true, silent = true })
+      vim.keymap.set("n", "<leader>gb", "<cmd>Gitsigns blame<cr>", { noremap = true, silent = true })
+      vim.keymap.set("n", "<leader>gj", "<cmd>Gitsigns nav_hunk next<cr>", { noremap = true, silent = true })
+      vim.keymap.set("n", "<leader>gk", "<cmd>Gitsigns nav_hunk prev<cr>", { noremap = true, silent = true })
     end,
   },
 }
