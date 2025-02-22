@@ -3,6 +3,16 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 vim.api.nvim_set_keymap("t", "<C-_>", "<C-\\><C-n>", { noremap = true, silent = true })
+vim.keymap.set(
+  "n",
+  "To",
+  function()
+    vim.cmd('tabnew')
+    vim.cmd('tabmove 0')
+    vim.cmd('terminal')
+  end,
+  { noremap = true, silent = false }
+)
 
 require("config.lazy")
 
