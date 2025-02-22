@@ -36,4 +36,5 @@ return {
       vim.keymap.set("n", "<leader>gk", "<cmd>Gitsigns nav_hunk prev<cr>", { noremap = true, silent = true })
     end,
   },
+  {'akinsho/git-conflict.nvim', version = "*", config = true},
 }
