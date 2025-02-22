@@ -8,6 +8,7 @@ return {
           "c",
           "javascript",
           "typescript",
+          "tsx",
           "css",
           "lua",
           "vim",

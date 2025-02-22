@@ -7,22 +7,25 @@ return {
 
         g.ale_ruby_rubocop_auto_correct_all = 1
 
+        local jsLike = {'eslint', 'prettier'}
         g.ale_linters = {
-          javascript = {'eslint'},
-          typescript = {'eslint'},
-          javascriptreact = {'eslint'},
-          typescriptreact = {'eslint'},
-          vue = {'eslint'},
+          javascript = jsLike,
+          typescript = jsLike,
+          javascriptreact = jsLike,
+          typescriptreact = jsLike,
+          vue = jsLike,
+          svelte = jsLike,
           ruby = {'rubocop', 'ruby'},
           lua = {'lua_language_server'}
         }
 
         g.ale_fixers = {
-          javascript = {'eslint'},
-          typescript = {'eslint'},
-          javascriptreact = {'eslint'},
-          typescriptreact = {'eslint'},
-          vue = {'eslint'},
+          javascript = jsLike,
+          typescript = jsLike,
+          javascriptreact = jsLike,
+          typescriptreact = jsLike,
+          vue = jsLike,
+          svelte = jsLike,
         }
 
         g.ale_async = 1

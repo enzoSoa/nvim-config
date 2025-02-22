@@ -11,7 +11,15 @@ return {
     event = { "BufReadPre", "BufNewFile" },
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "ast_grep", "clangd", "lua_ls", "ts_ls", "volar" },
+        ensure_installed = {
+          "ast_grep",
+          "clangd",
+          "lua_ls",
+          "ts_ls",
+          "volar",
+          "svelte",
+          "html",
+        },
         automatic_installation = true,
       })
 
@@ -21,6 +29,8 @@ return {
       lspconfig.lua_ls.setup {}
       lspconfig.ts_ls.setup {}
       lspconfig.volar.setup {}
+      lspconfig.svelte.setup {}
+      lspconfig.html.setup {}
     end,
   },
   {
