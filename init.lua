@@ -13,6 +13,8 @@ vim.keymap.set(
   end,
   { noremap = true, silent = false }
 )
+vim.keymap.set( "n", "Tv", ':vsplit | terminal<CR>', { noremap = true, silent = false })
+vim.keymap.set( "n", "TV", ':vsplit<CR><C-w>l:terminal<CR>', { noremap = true, silent = false })
 
 require("config.lazy")
 
