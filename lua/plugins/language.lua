@@ -18,6 +18,7 @@ return {
         "volar",
         "svelte",
         "html",
+        "rust_analyzer",
       }
 
       require("mason-lspconfig").setup({

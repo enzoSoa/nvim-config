@@ -5,7 +5,7 @@ return {
     "zakissimo/smoji.nvim",
     cmd="Smoji",
     keys = {
-      { "<leader><leader>e", "<cmd>Gitsigns blame<cr>", desc = "Git[e]moji" },
+      { "<leader><leader>e", "<cmd>Smoji<cr>", desc = "Git[e]moji" },
     },
     config = function()
       require("smoji")

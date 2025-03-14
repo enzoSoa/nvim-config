@@ -13,6 +13,7 @@ return {
           "lua",
           "vim",
           "vue",
+          "rust",
           "vimdoc",
           "query",
           "markdown",
